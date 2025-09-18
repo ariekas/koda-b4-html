@@ -1,0 +1,281 @@
+* {
+  font-family: "Poppins";
+}
+
+.head {
+  height: 48px;
+  margin-top: 40px;
+  margin-left: 80px;
+  margin-right: 80px;
+}
+
+.head .nav {
+  display: inline-block;
+  position: relative;
+  width: 100%;
+  font-size: 28px;
+}
+
+.head .nav h1{
+  margin: 0;
+}
+
+.head .nav span {
+  color: #fc7647;
+}
+
+.head .nav .nav-profile {
+  display: inline-block;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  text-align: center;
+}
+
+.head .nav .nav-profile svg {
+  margin-left: 20px;
+  vertical-align: middle;
+  display: inline-block;
+}
+
+.head .nav .nav-profile .profile {
+  display: inline-block;
+  vertical-align: middle;
+  text-align: center;
+  font-size: 18px;
+  color: #293038;
+}
+
+.head .nav .nav-profile .profile p,
+.head .nav .nav-profile .profile img {
+  margin-left: 14px;
+}
+.head .nav .nav-profile .profile p,
+.head .nav .nav-profile img {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+main {
+  width: 800px;
+  height: 672px;
+  box-shadow: 1px 1px 1px 2px #13073414;
+  position: absolute;
+  top: 128px;
+  left: 320px;
+  right: 320px;
+  margin: 0 auto;
+  margin-top: 80px;
+  border-radius: 10px;
+}
+
+main .main-tab {
+  margin: 0 auto;
+  margin-top: 40px;
+  width: 720px;
+  height: 608px;
+  /* border: 1px solid #ccced2; */
+  position: relative;
+}
+
+main .main-tab .main-head,
+main .main-tab .main-head .main-text {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+main .main-tab .main-head .main-text h1 {
+  margin-top: 0;
+  color: #ff5f26;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+main .main-tab .main-head .main-text :nth-child(2) {
+  font-size: 24px;
+  color: #293038;
+  font-weight: bold;
+}
+
+main .main-tab .main-head .main-text :nth-child(3) {
+  font-size: 16px;
+  color: #7a7f83;
+  font-weight: normal;
+}
+main .main-tab .main-head button {
+  position: absolute;
+  right: 0;
+  top: 5%;
+  background-color: #ff5f26;
+  padding: 12px 15px 12px 15px;
+
+  border-radius: 60px;
+  border: none;
+  color: white;
+  font-weight: bold;
+}
+
+main .main-tab .main-head button,
+main .main-tab .main-head button img {
+  display: inline;
+  vertical-align: middle;
+}
+
+
+main .main-tab .main-str h1 {
+  display: inline;
+  text-align: start;
+  color: #7a7f83;
+  font-size: 16px;
+  font-weight: normal;
+}
+
+main .main-tab .main-str button,
+main .main-tab .main-str button img {
+  display: inline;
+  vertical-align: middle;
+  margin-left: 5px;
+}
+
+main .main-tab .main-str button {
+  position: absolute;
+  right: 0;
+  background-color: #ffffff;
+  padding: 10px 14px 10px 14px;
+  border-radius: 50px;
+  border: none;
+  font-weight: bold;
+  border: 1px solid #ccced2;
+  color: #7a7f83;
+}
+
+.chck {
+  position: relative;
+  margin-top: 12px;
+}
+
+.chck .box-srt {
+  position: absolute;
+  z-index: 1;
+  right: 0;
+  margin-top: 12px;
+  bottom: -20px;
+  height: 150px;
+  width: 290px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  border: 1px solid #ccced2;
+}
+
+.chck .box-srt .box-srt-val {
+  padding: 24px;
+}
+
+
+.chck .box-srt .box-srt-val > div:first-child {
+  position: relative;
+  padding-bottom: 12px;
+}
+
+.chck .box-srt .box-srt-val > div:nth-child(2){
+  position: relative;
+  padding: 0;
+}
+.chck .box-srt .box-srt-val > div:last-child{
+  padding-top: 12px;
+  position: relative;
+
+}
+
+
+.chck .box-srt .box-srt-val > div > input {
+  position: absolute;
+  right: 0;
+}
+
+.chck .box-srt .box-srt-val input[type="radio"]{
+  border: 1px solid #CCCED2;
+  width: 17px;
+  height: 17px;
+  border-radius: 50%; 
+}
+.chck .box-srt .box-srt-val input[type="radio"]:checked {
+  accent-color: #FF5F26; 
+
+
+}
+.chck .main-chck {
+  position: relative;
+  margin-top: 5px;
+}
+
+.chck .main-chck :nth-child(1) {
+  position: relative;
+  top: 10px;
+}
+
+.chck .main-chck img {
+  position: absolute;
+  right: 15px;
+  top: 25px;
+}
+
+.chck .main-chck :nth-child(2) {
+  color: #293038;
+  font-size: 18px;
+}
+
+.chck .main-chck :nth-child(3) {
+  margin-left: 16px;
+  color: #ff5f26;
+  font-size: 12px;
+  background-color: #ffebd3;
+  padding: 8px 12px 8px 12px;
+  border-radius: 50px;
+}
+
+.chck .main-chck div {
+  margin-top: 10px;
+  margin-left: 16px;
+  color: #7a7f83;
+  position: relative;
+  font-size: 14px;
+  left: 35px;
+}
+
+.chck .main-chck label > input[type="checkbox"] {
+  display: none;
+}
+
+.chck .main-chck label > input[type="checkbox"]:checked + span {
+  width: 28px;
+  height: 28px;
+  display: inline-block;
+  background-color: #ff5f26;
+  border-radius: 50%;
+  position: relative;
+}
+
+.chck .main-chck label > input[type="checkbox"]:checked + span::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 25px;
+  height: 25px;
+  transform: translate(-50%, -50%);
+  background: url("material-symbols--check.svg") no-repeat center;
+  background-size: contain;
+}
+
+.chck .main-chck label > input[type="checkbox"] + span {
+  background-color: rgb(255, 255, 255);
+  border: 1px solid #ccced2;
+  width: 28px;
+  height: 28px;
+  display: inline-block;
+  border-radius: 50px;
+  margin: 0 14px 0 0;
+}
+

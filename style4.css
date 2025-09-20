@@ -1,6 +1,7 @@
 body {
     margin: 0;
     font-family: 'Poppins', sans-serif;
+    background-color: #F5F5F5;
   }
   
   /* Header */
@@ -9,38 +10,47 @@ body {
   }
   .nav {
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
-    align-items: center;
   }
+
+  
   .nav h1 {
     font-size: 28px;
     letter-spacing: 2px;
-    margin: 0;
   }
   .nav h1 span {
     color: #FF5F26;
   }
   .nav-profile {
     display: flex;
+    flex-direction: row;
     align-items: center;
   }
-
-  .nav-profile svg{
+   .nav-profile svg{
     margin-right: 24px;
   }
-  .profile {
+  .nav-profile .profile {
     display: flex;
+    flex-direction: row;
     align-items: center;
     gap: 14px;
   }
-  .profile p {
+  .nav-profile .profile p {
     font-size: 18px;
     color: #293038;
-    margin: 0;
     line-height: 26px;
   }
   
-  /* Main container */
+  /* SVG colors */
+  .orange {
+    fill: #FF5F26;
+  }
+  .grey {
+    fill: #9E9E9E;
+  }
+  
+  /* Main layout */
   main {
     box-shadow: 1px 1px 1px 2px #13073414;
     border-radius: 12px;
@@ -48,35 +58,43 @@ body {
     height: 672px;
     margin: 40px auto;
     display: flex;
+    background-color: white;
+    position: relative;
+  }
+  .bg-strip {
+    background-color: #F5F5F5;
+    width: 800px;
+    height: 106px;
+    position: absolute;
+    top: 207px;
   }
   .main-tab {
     width: 100%;
     margin: 40px;
+    gap: 16px;
     display: flex;
     flex-direction: column;
-    gap: 16px;
     position: relative;
   }
+  
+  /* Headings */
   .main-head {
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
     align-items: center;
   }
-  .main-text{
-    gap: 10px;
-    display: flex;
-    flex-direction: column;
+  .main-head h1 {
+    color: #FF5F26;
+    font-size: 16px;
+    letter-spacing: 1px;
+    margin: 0;
   }
-  .main-text div{
+  .main-text div {
     display: flex;
     flex-direction: column;
     gap: 12px;
-  }
-  .main-text h1 {
-    color: #FF5F26;
-    font-size: 16px;
-    margin: 0;
-    letter-spacing: 1px;
+    margin-top: 10px;
   }
   .main-text .title {
     font-size: 24px;
@@ -88,111 +106,147 @@ body {
     color: #7A7F83;
     margin: 0;
   }
-  .btn-add {
+  
+  /* Button */
+  .main-head button {
     padding: 12px 15px;
     border: none;
     background-color: #FF5F26;
     border-radius: 60px;
+    gap: 8px;
     display: flex;
     align-items: center;
-    gap: 8px;
     font-size: 16px;
     color: white;
     font-weight: bold;
     cursor: pointer;
   }
-  .btn-add:hover {
-    background-color: #e24f1d; /* pseudo-class */
+  .main-head button:hover {
+    background-color: #e44e1c;
   }
   
-  /* Sort */
+  /* Sort section */
   .main-str {
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
   }
   .main-str h1 {
+    margin: 0;
     font-size: 16px;
     color: #7A7F83;
   }
-  .str {
+  .main-str .str {
     padding: 10px 14px;
     border: 1px solid #FF5F26;
     background-color: white;
     color: #FF5F26;
     border-radius: 50px;
+    gap: 6px;
     display: flex;
     align-items: center;
-    gap: 10px;
     cursor: pointer;
   }
-  .str:hover {
-    background-color: #fff3ec;
+  .main-str .str:hover {
+    background-color: #FFF2EB;
   }
   
-  /* Checkbox */
-  .main-chck {
+
+  .main-chck{
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    position: relative;
   }
-
-  .main-chck img {
-    position: absolute;
-    right: 0;
-    top: 12px;
-  }
-  .task {
-    display: flex;
-    flex-direction: column;
-  }
-  .task-head {
-    display: flex;
-    gap: 16px;
-    align-items: center;
-  }
-  .task-name {
-    font-size: 18px;
-    color: #293038;
-  }
-  .badge {
-    padding: 8px 12px;
-    background-color: #FFEBD3;
-    border-radius: 50px;
-    color: #FF5F26;
-  }
-  .task-desc {
-    margin-left: 45px;
-    color: #7A7F83;
-  }
-  
-  /* Checkbox styling */
-  .main-chck label > input[type=checkbox] {
+  /* Checkbox custom */
+  .main-chck label>input[type=checkbox] {
     display: none;
   }
-  .main-chck label > input[type=checkbox] + span {
-    background-color: #fff;
+  .main-chck label>input[type=checkbox]+span {
+    background-color: white;
     border: 1px solid #CCCED2;
     width: 28px;
     height: 28px;
     border-radius: 50px;
     display: flex;
     justify-content: center;
+  }
+  .main-chck label>input[type=checkbox]:checked+span {
+    width: 28px;
+    height: 28px;
+    display: flex;
+    justify-content: center;
+    background-color: #FF5F26;
+    border-radius: 50%;
     position: relative;
   }
-  .main-chck label > input[type=checkbox]:checked + span {
-    background-color: #FF5F26;
-  }
-  .main-chck label > input[type=checkbox]:checked + span::after {
+  .main-chck label>input[type=checkbox]:checked+span::after {
     content: "";
     position: absolute;
     top: 50%;
     left: 50%;
-    width: 18px;
-    height: 18px;
+    width: 25px;
+    height: 25px;
     transform: translate(-50%, -50%);
     background: url("./assest/icons/material-symbols--check.svg") no-repeat center;
     background-size: contain;
+  }
+  
+  /* Task Input */
+  .task-input {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    align-items: center;
+  }
+  .divider {
+    display: flex;
+    flex-direction: row;
+    gap: 4px;
+  }
+  .divider div {
+    height: 28px;
+    background-color: black;
+    width: 1px;
+  }
+  .divider input {
+    border: none;
+    background-color: #F5F5F5;
+    font-size: 18px;
+    color: #9E9E9E;
+  }
+  
+  /* Detail */
+  .task-detail {
+    margin-left: 45px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .task-detail div {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+  }
+  .task-detail input {
+    border: none;
+    background-color: #F5F5F5;
+    font-size: 14px;
+    color: #9E9E9E;
+  }
+  
+  /* Badge */
+  .badge {
+    padding: 8px 12px;
+    background-color: #FFEBD3;
+    border-radius: 50px;
+    color: #FF5F26;
+  }
+  
+  /* Desc */
+  .desc {
+    margin-left: 45px;
+    color: #7A7F83;
   }
   
   /* Footer */
@@ -201,37 +255,28 @@ body {
     bottom: 0;
     width: 100%;
   }
-  .footer .line {
+  .footer div:first-child {
     height: 1px;
     background-color: #CCCED2;
   }
-  .footer .done {
+  .footer div:last-child {
     display: flex;
+    flex-direction: row;
     align-items: center;
     gap: 8px;
     margin-top: 24px;
   }
-  .footer .done img {
+  .footer div:last-child img {
+    transform: rotate(-90deg);
     width: 12px;
     height: 10px;
-    transform: rotate(-90deg);
   }
-  .footer .done p {
+  .footer div:last-child p {
     font-size: 18px;
     color: #7A7F83;
     margin: 0;
   }
-  
-  /* Pseudo-class & Pseudo-element Example */
-  .main-chck:first-child {
-    background-color: #fafafa;
-  }
-  .main-chck:last-child {
-    border-bottom: 2px solid #FF5F26;
-  }
- 
 
- 
 
   @media (max-width: 1024px) {
     .head {
@@ -247,6 +292,13 @@ body {
     .head {
       padding: 5px;
     }
+
+    .bg-strip{
+      width: 100%;
+      top: 255px;
+      height: 120px;
+    }
+    
   
     .profile p {
       display: none;
@@ -268,7 +320,7 @@ body {
       gap: 10px;
     }
 
-    .task-head{
+    .main-chck > div > div{
       flex-direction: column;
       align-items: start;
       gap: 5px;

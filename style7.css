@@ -1,0 +1,353 @@
+/* style.css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+.head {
+    padding: 40px 80px;
+}
+
+.nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.logo {
+    font-size: 28px;
+    letter-spacing: 2px;
+}
+
+.logo-accent {
+    color: #FF5F26;
+}
+
+.nav-profile {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.notification-icon {
+    margin-right: 24px;
+}
+
+.profile {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 14px;
+}
+
+.profile-name {
+    font-size: 18px;
+    color: #293038;
+    line-height: 26px;
+}
+
+.main-container {
+    box-shadow: 1px 1px 1px 2px #13073414;
+    border-radius: 12px;
+    width: 800px;
+    height: 800px;
+    margin: 40px auto;
+    display: flex;
+}
+
+.main-tab {
+    width: 100%;
+    margin: 40px 40px 24px 40px;
+    gap: 16px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.main-head {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.section-title {
+    color: #FF5F26;
+    font-size: 16px;
+    letter-spacing: 1px;
+    margin: 0;
+}
+
+.section-subtitle {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 10px;
+}
+
+.title {
+    font-size: 24px;
+    color: #293038;
+    margin: 0;
+}
+
+.description {
+    font-size: 16px;
+    color: #7A7F83;
+    margin: 0;
+}
+
+.add-task-btn {
+    padding: 12px 15px;
+    border: none;
+    background-color: #FF5F26;
+    border-radius: 60px;
+    gap: 8px;
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    color: white;
+    font-weight: bold;
+}
+
+.main-str {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.sort-title {
+    margin: 0;
+    font-size: 16px;
+    color: #7A7F83;
+}
+
+.sort-btn {
+    padding: 10px 14px;
+    border: 1px solid #FF5F26;
+    background-color: white;
+    color: #FF5F26;
+    border-radius: 50px;
+    gap: 6px;
+    display: flex;
+    align-items: center;
+}
+
+.main-chck label > input[type=checkbox] {
+    display: none;
+}
+
+.main-chck label > input[type=checkbox]:checked + span {
+    width: 28px;
+    height: 28px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: #FF5F26;
+    border-radius: 50%;
+    position: relative;
+}
+
+.main-chck label > input[type=checkbox]:checked + span::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 25px;
+    height: 25px;
+    transform: translate(-50%, -50%);
+    background: url("./assest/icons/material-symbols--check.svg") no-repeat center;
+    background-size: contain;
+}
+
+.main-chck label > input[type=checkbox] + span {
+    background-color: rgb(255, 255, 255);
+    border: 1px solid #CCCED2;
+    width: 28px;
+    height: 28px;
+    border-radius: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.task-item {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: relative;
+}
+
+.task-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.task-header {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    align-items: center;
+}
+
+.task-name {
+    color: #293038;
+    font-size: 18px;
+}
+
+.task-tag {
+    padding: 8px 12px;
+    background-color: #FFEBD3;
+    border-radius: 50px;
+    color: #FF5F26;
+}
+
+.more-icon {
+    cursor: pointer;
+}
+
+.task-description {
+    margin-left: 45px;
+}
+
+.toggle-icon {
+    padding: 10px;
+    transform: rotate(-180deg);
+    cursor: pointer;
+}
+
+.task-menu {
+    background-color: white;
+    border: 1px solid #CCCED2;
+    border-radius: 8px;
+    padding: 24px;
+    gap: 12px;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    left: 18rem;
+    top: 2.8rem;
+    z-index: 10;
+}
+
+.menu-item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    cursor: pointer;
+}
+
+.menu-item p {
+    margin: 0;
+}
+
+.subtask-container {
+    background-color: #F5F5F5;
+    border-radius: 8px;
+}
+
+.subtask-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 16px 0;
+}
+
+.subtask-header h1 {
+    margin: 0;
+    font-size: 16px;
+    color: #293038;
+    line-height: 100%;
+}
+
+.add-subtask-btn {
+    display: flex;
+    align-items: center;
+    border: 1px solid #CCCED2;
+    background-color: white;
+    font-size: 12px;
+    line-height: 20px;
+    color: #FF5F26;
+    padding: 6px 10px;
+    gap: 10px;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+.subtask-list {
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.subtask-item {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.subtask-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.subtask-header-inner {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    align-items: center;
+}
+
+.subtask-name {
+    color: #293038;
+    font-size: 16px;
+}
+
+.subtask-name.completed {
+    text-decoration: line-through;
+}
+
+.delete-icon {
+    padding: 10px;
+    cursor: pointer;
+}
+
+.completed-section {
+    width: 100%;
+}
+
+.divider {
+    height: 1px;
+    background-color: #CCCED2;
+    margin: 0;
+}
+
+.completed-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
+    margin-top: 24px;
+}
+
+.completed-icon {
+    transform: rotate(-90deg);
+    vertical-align: middle;
+}
+
+.completed-text {
+    display: inline-block;
+    font-size: 18px;
+    color: #7A7F83;
+    margin: 0;
+    vertical-align: middle;
+}

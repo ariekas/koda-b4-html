@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>weekly</title>
+    <link rel="stylesheet" href="style7.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rancho&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header class="head">
+        <nav class="nav">
+            <h1 class="logo">waz<span class="logo-accent">wez</span>.</h1>
+            <div class="nav-profile">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="notification-icon">
+                    <g fill="none">
+                        <path fill="#FF5F26" d="M19 1a4 4 0 1 0 0 8a4 4 0 0 0 0-8" />
+                        <path fill="#9E9E9E" d="M14.376 2.022a5.5 5.5 0 0 0 4.375 8.473v3.328l2.463 4.927H.787l2.464-4.927V9a7.75 7.75 0 0 1 11.125-6.978" />
+                        <path fill="#FF5F26" d="M9 21v2h4v-2z" />
+                    </g>
+                </svg>
+                <div class="profile">
+                    <img src="./assest/icons/profile.png" alt="Profile" width="48" height="48">
+                    <p class="profile-name">Krozeo Jupiter</p>
+                    <img src="./assest/icons/arrow.png" alt="Dropdown" width="12" height="10">
+                </div>
+            </div>
+        </nav>
+    </header>
+    
+    <main class="main-container">
+        <div class="main-tab">
+            <div class="main-head">
+                <div class="main-text">
+                    <h1 class="section-title">MY TASKS</h1>
+                    <div class="section-subtitle">
+                        <p class="title">To Do List</p>
+                        <p class="description">Buat list tugas harian saya</p>
+                    </div>
+                </div>
+                <button class="add-task-btn">
+                    <img src="./assest/icons/Plus.svg" alt="Tambah" width="24" height="24">
+                    Tambah tugas
+                </button>
+            </div>
+            
+            <div class="main-str">
+                <h1 class="sort-title">Sort By</h1>
+                <button class="sort-btn" onclick="window.location.href = './page2.html'">
+                    <span>By Tanggal</span>
+                    <img src="./assest/icons/Arrow - Down 2.png" alt="Dropdown" width="12" height="10">
+                </button>
+            </div>
+
+            <div class="main-chck task-item">
+                <div class="task-content">
+                    <div class="task-header">
+                        <label for="check-1">
+                            <input type="checkbox" id="check-1">
+                            <span class="custom-checkbox"></span>
+                        </label>
+                        <label for="check-1" class="task-name">Product Design</label>
+                        <span class="task-tag">Hari Ini</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="more-icon">
+                            <g class="more-vertical-outline">
+                                <path fill="#CCCED2" d="M12 6a2 2 0 1 1 0-4a2 2 0 0 1 0 4m0 8a2 2 0 1 1 0-4a2 2 0 0 1 0 4m0 8a2 2 0 1 1 0-4a2 2 0 0 1 0 4" class="Vector" />
+                            </g>
+                        </svg>
+                    </div>
+                    <div class="task-description">
+                        Tugas untuk design team
+                    </div>
+                </div>
+                <img src="./assest/icons/Arrow - Up 2 new.png" alt="Toggle" width="12" height="10" class="toggle-icon">
+                <div class="task-menu">
+                    <div class="menu-item">
+                        <img src="./assest/icons/Edit.png" alt="Edit" width="24" height="24">
+                        <p>Rename task</p>
+                    </div>
+                    <div class="menu-item">
+                        <img src="./assest/icons/Delete.png" alt="Delete" width="24" height="24">
+                        <p>Delete task</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="subtask-container">
+                <div class="subtask-header">
+                    <h1>Subtask</h1>
+                    <button class="add-subtask-btn">
+                        <img src="./assest/icons/Plus.png" alt="Tambah" width="22" height="22">
+                        Tambah
+                    </button>
+                </div>
+                <div class="subtask-list">
+                    <div class="main-chck subtask-item">
+                        <div class="subtask-content">
+                            <div class="subtask-header-inner">
+                                <label for="subtask-1">
+                                    <input type="checkbox" id="subtask-1">
+                                    <span class="custom-checkbox"></span>
+                                </label>
+                                <label for="subtask-1" class="subtask-name">Design review</label>
+                            </div>
+                        </div>
+                        <img src="./assest/icons/trash.png" alt="Hapus" width="18" height="18" class="delete-icon">
+                    </div>
+                    <div class="main-chck subtask-item">
+                        <div class="subtask-content">
+                            <div class="subtask-header-inner">
+                                <label for="subtask-2">
+                                    <input type="checkbox" id="subtask-2">
+                                    <span class="custom-checkbox"></span>
+                                </label>
+                                <label for="subtask-2" class="subtask-name">Low-Fidelity design</label>
+                            </div>
+                        </div>
+                        <img src="./assest/icons/trash.png" alt="Hapus" width="18" height="18" class="delete-icon">
+                    </div>
+                    <div class="main-chck subtask-item">
+                        <div class="subtask-content">
+                            <div class="subtask-header-inner">
+                                <label for="subtask-3">
+                                    <input type="checkbox" id="subtask-3">
+                                    <span class="custom-checkbox"></span>
+                                </label>
+                                <label for="subtask-3" class="subtask-name">High-Fidelity design</label>
+                            </div>
+                        </div>
+                        <img src="./assest/icons/trash.png" alt="Hapus" width="18" height="18" class="delete-icon">
+                    </div>
+                    <div class="main-chck subtask-item">
+                        <div class="subtask-content">
+                            <div class="subtask-header-inner">
+                                <label for="subtask-4">
+                                    <input type="checkbox" id="subtask-4">
+                                    <span class="custom-checkbox"></span>
+                                </label>
+                                <label for="subtask-4" class="subtask-name completed">Design Guidelines</label>
+                            </div>
+                        </div>
+                        <img src="./assest/icons/trash.png" alt="Hapus" width="18" height="18" class="delete-icon">
+                    </div>
+                </div>
+            </div>
+
+            <div class="main-chck task-item">
+                <div class="task-content">
+                    <div class="task-header">
+                        <label for="check-2">
+                            <input type="checkbox" id="check-2">
+                            <span class="custom-checkbox"></span>
+                        </label>
+                        <label for="check-2" class="task-name">Development</label>
+                        <span class="task-tag">15 Juni 2022</span>
+                    </div>
+                </div>
+                <img src="./assest/icons/arrow.png" alt="Toggle" width="12" height="10" class="toggle-icon">
+            </div>
+
+            <div class="main-chck task-item">
+                <div class="task-content">
+                    <div class="task-header">
+                        <label for="check-3">
+                            <input type="checkbox" id="check-3">
+                            <span class="custom-checkbox"></span>
+                        </label>
+                        <label for="check-3" class="task-name">Launching Wazwez Website</label>
+                        <span class="task-tag">20 Juni 2022</span>
+                    </div>
+                </div>
+                <img src="./assest/icons/arrow.png" alt="Toggle" width="12" height="10" class="toggle-icon">
+            </div>
+
+            <div class="completed-section">
+                <div class="divider"></div>
+                <div class="completed-header">
+                    <img src="./assest/icons/arrow.png" alt="Toggle" width="12" height="10" class="completed-icon">
+                    <p class="completed-text">Terselesaikan (3 tugas)</p>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

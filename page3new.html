@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>weekly</title>
+    <link rel="stylesheet" href="./style3.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Rancho&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header class="head">
+        <nav class="nav">
+            <h1>waz<span>wez</span>.</h1>
+            <div class="nav-profile">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                    <g fill="none">
+                        <path class="icon-main" d="M19 1a4 4 0 1 0 0 8a4 4 0 0 0 0-8" />
+                        <path class="icon-secondary"
+                            d="M14.376 2.022a5.5 5.5 0 0 0 4.375 8.473v3.328l2.463 4.927H.787l2.464-4.927V9a7.75 7.75 0 0 1 11.125-6.978" />
+                        <path class="icon-main" d="M9 21v2h4v-2z" />
+                    </g>
+                </svg>
+                <div class="profile">
+                    <img src="./assest/icons/profile.png" alt="" width="48" height="48">
+                    <p>Krozeo Jupiter</p>
+                    <img src="./assest/icons/arrow.png" alt="" width="12" height="10">
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="main-tab">
+            <div class="main-head">
+                <div class="main-text">
+                    <h1>MY TASKS</h1>
+                    <div>
+                        <p class="title">To Do List </p>
+                        <p class="subtitle">Buat list tugas harian saya</p>
+                    </div>
+                </div>
+                <button class="btn-add">
+                    <img src="./assest/icons/Plus.svg" alt="" width="24" height="24">
+                    Tambah tugas
+                </button>
+            </div>
+
+            <div class="main-str">
+                <h1>Sort By</h1>
+                <button class="str" onclick="window.location.href = './page2.html'">
+                    <span>By Tanggal</span>
+                    <img src="./assest/icons/Arrow - Down 2.png" alt="" width="12" height="10">
+                </button>
+            </div>
+
+            <!-- checklist -->
+            <div class="main-chck">
+                <div>
+                    <div>
+                        <label for="check-1">
+                            <input type="checkbox" id="check-1">
+                            <span></span>
+                        </label>
+                        <label for="check-1" class="task">Product Design</label>
+                        <span class="badge">Hari Ini</span>
+                    </div>
+                    <div class="desc">
+                        Tugas untuk design team
+                    </div>
+                </div>
+                <img src="./assest/icons/arrow.png" alt="" width="12" height="10">
+            </div>
+
+            <div class="main-chck">
+                <div>
+                    <div>
+                        <label for="check-2">
+                            <input type="checkbox" id="check-2">
+                            <span></span>
+                        </label>
+                        <label for="check-2" class="task">Development</label>
+                        <span class="badge">15 Juni 2022</span>
+                    </div>
+                </div>
+                <img src="./assest/icons/arrow.png" alt="" width="12" height="10">
+            </div>
+
+            <div class="main-chck">
+                <div>
+                    <div>
+                        <label for="check-3">
+                            <input type="checkbox" id="check-3">
+                            <span></span>
+                        </label>
+                        <label for="check-3" class="task">Launching Wazwez Website</label>
+                        <span class="badge">20 Juni 2022</span>
+                    </div>
+                </div>
+                <img src="./assest/icons/arrow.png" alt="" width="12" height="10">
+            </div>
+
+            <!-- selesai -->
+            <div class="done">
+                <div class="line"></div>
+                <div class="done-head">
+                    <img src="./assest/icons/Arrow - Up 2 new.png" alt="" width="12" height="10">
+                    <p>Terselesaikan (3 tugas)</p>
+                </div>
+                <div class="done-list">
+                    <div class="main-chck">
+                        <div>
+                            <div>
+                                <label for="check-4">
+                                    <input type="checkbox" id="check-4">
+                                    <span></span>
+                                </label>
+                                <label for="check-4" class="task done-text">Requirements Detail</label>
+                            </div>
+                        </div>
+                        <img src="./assest/icons/arrow.png" alt="" width="12" height="10">
+                    </div>
+                    <div class="main-chck">
+                        <div>
+                            <div>
+                                <label for="check-5">
+                                    <input type="checkbox" id="check-5">
+                                    <span></span>
+                                </label>
+                                <label for="check-5" class="task done-text">Backlog Teams</label>
+                            </div>
+                        </div>
+                        <img src="./assest/icons/arrow.png" alt="" width="12" height="10">
+                    </div>
+                    <div class="main-chck">
+                        <div>
+                            <div>
+                                <label for="check-6">
+                                    <input type="checkbox" id="check-6">
+                                    <span></span>
+                                </label>
+                                <label for="check-6" class="task done-text">Meeting With Teams</label>
+                            </div>
+                        </div>
+                        <img src="./assest/icons/arrow.png" alt="" width="12" height="10">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

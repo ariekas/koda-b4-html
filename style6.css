@@ -137,19 +137,33 @@ main {
     align-items: center;
 }
 
-/* Checkbox items */
 .main-chck {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+/* Checkbox items */
+.main-chck :first-child {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    
 }
 
-.main-chck > div > div:first-child {
-    display: flex;
-    flex-direction: row;
-    gap: 16px;
-    align-items: center;
+.main-chck :first-child img{
+    padding: 5px;
 }
+
+.main-chck .main-label{
+    margin: 0;
+   padding-left: 2.8rem;
+}
+
+.main-chck > div :first-child {
+    display: flex; flex-direction: row; align-items: center;
+    gap: 16px;
+}
+
 
 .main-chck label > input[type=checkbox] {
     display: none;
@@ -194,16 +208,14 @@ main {
     font-size: 18px;
 }
 
-.main-chck > div > div:first-child > span:last-of-type {
+.main-chck > div > div :nth-child(2) span {
     padding: 8px 12px;
     background-color: #FFEBD3;
     border-radius: 50px;
     color: #FF5F26;
 }
 
-.main-chck > div > .main-label {
-    margin-left: 45px;
-}
+
 
 .main-chck > img {
     padding: 10px;
@@ -211,6 +223,13 @@ main {
 
 .main-chck > img:first-of-type {
     transform: rotate(-180deg);
+}
+.subtask-container .main-chck label[for^="check-"] {
+    font-size: 16px;
+}
+
+.subtask-container .main-chck img {
+    padding: 10px;
 }
 
 /* Subtask section */
@@ -254,14 +273,7 @@ main {
     gap: 10px;
 }
 
-.subtask-container .main-chck label[for^="check-"] {
-    font-size: 16px;
-    text-decoration: line-through;
-}
 
-.subtask-container .main-chck img {
-    padding: 10px;
-}
 
 /* Completed section */
 .completed-section > div:first-child {
@@ -290,3 +302,44 @@ main {
     margin: 0;
     vertical-align: middle;
 }
+@media (max-width: 1024px) {
+.head {
+    padding: 20px 40px;
+}
+main{
+    width: 100%;
+}
+}
+
+
+@media (max-width: 425px) {
+    .head {
+        padding: 10px;
+    }
+
+    .profile p {
+        display: none;
+    }
+
+    main{
+        width: 100%;
+        height: 100%;
+    }
+
+    .main-tab{
+        margin: 10px;
+    }
+
+    .main-head{
+        flex-direction: column;
+        align-items: start;
+        gap: 16px;
+    }
+
+    .main-chck > div > div:first-child  {
+        display: flex;
+        flex-direction: column;
+    } 
+   
+}
+

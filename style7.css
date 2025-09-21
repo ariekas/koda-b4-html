@@ -1,14 +1,10 @@
-/* style.css */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
+/* Reset dan font */
 body {
+    margin: 0;
     font-family: 'Poppins', sans-serif;
 }
 
+/* Header styles */
 .head {
     padding: 40px 80px;
 }
@@ -19,12 +15,42 @@ body {
     justify-content: space-between;
 }
 
-.logo {
+.drpdwn{
+    width: 189px;
+    border: 1px solid #CCCED2;
+    background-color: white;
+    border-radius: 8px;
+    position: absolute;
+    right: 0;
+    top: 10.7rem;
+    padding: 24px;
+    z-index: 1;
+  }
+   .drpdwn .drpdwn-row {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  
+  }
+  
+  .drpdwn .drpdwn-row div{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .drpdwn .drpdwn-row p{
+    margin: 0;
+  }
+  
+
+.nav h1 {
     font-size: 28px;
     letter-spacing: 2px;
 }
 
-.logo-accent {
+.nav h1 span {
     color: #FF5F26;
 }
 
@@ -34,7 +60,7 @@ body {
     align-items: center;
 }
 
-.notification-icon {
+.nav-profile svg {
     margin-right: 24px;
 }
 
@@ -45,13 +71,14 @@ body {
     gap: 14px;
 }
 
-.profile-name {
+.profile p {
     font-size: 18px;
     color: #293038;
     line-height: 26px;
 }
 
-.main-container {
+/* Main container */
+main {
     box-shadow: 1px 1px 1px 2px #13073414;
     border-radius: 12px;
     width: 800px;
@@ -69,6 +96,7 @@ body {
     position: relative;
 }
 
+/* Main header */
 .main-head {
     display: flex;
     flex-direction: row;
@@ -76,33 +104,33 @@ body {
     align-items: center;
 }
 
-.section-title {
+.main-text h1 {
     color: #FF5F26;
     font-size: 16px;
     letter-spacing: 1px;
     margin: 0;
 }
 
-.section-subtitle {
+.main-text div {
     display: flex;
     flex-direction: column;
     gap: 12px;
     margin-top: 10px;
 }
 
-.title {
+.main-text div p:first-child {
     font-size: 24px;
     color: #293038;
     margin: 0;
 }
 
-.description {
+.main-text div p:last-child {
     font-size: 16px;
     color: #7A7F83;
     margin: 0;
 }
 
-.add-task-btn {
+.main-head button {
     padding: 12px 15px;
     border: none;
     background-color: #FF5F26;
@@ -115,19 +143,20 @@ body {
     font-weight: bold;
 }
 
+/* Sort section */
 .main-str {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
 
-.sort-title {
+.main-str h1 {
     margin: 0;
     font-size: 16px;
     color: #7A7F83;
 }
 
-.sort-btn {
+.main-str .str {
     padding: 10px 14px;
     border: 1px solid #FF5F26;
     background-color: white;
@@ -138,8 +167,47 @@ body {
     align-items: center;
 }
 
+.main-chck {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+/* Checkbox items */
+.main-chck :first-child {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    
+}
+
+.main-chck :first-child img{
+    padding: 5px;
+}
+
+.main-chck .main-label{
+    margin: 0;
+   padding-left: 2.8rem;
+}
+
+.main-chck > div :first-child {
+    display: flex; flex-direction: row; align-items: center;
+    gap: 16px;
+}
+
+
 .main-chck label > input[type=checkbox] {
     display: none;
+}
+
+.main-chck label > input[type=checkbox] + span {
+    background-color: rgb(255, 255, 255);
+    border: 1px solid #CCCED2;
+    width: 28px;
+    height: 28px;
+    border-radius: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 }
 
 .main-chck label > input[type=checkbox]:checked + span {
@@ -165,95 +233,43 @@ body {
     background-size: contain;
 }
 
-.main-chck label > input[type=checkbox] + span {
-    background-color: rgb(255, 255, 255);
-    border: 1px solid #CCCED2;
-    width: 28px;
-    height: 28px;
-    border-radius: 50px;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-}
-
-.task-item {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    position: relative;
-}
-
-.task-content {
-    display: flex;
-    flex-direction: column;
-}
-
-.task-header {
-    display: flex;
-    flex-direction: row;
-    gap: 16px;
-    align-items: center;
-}
-
-.task-name {
+.main-chck label[for^="check-"] {
     color: #293038;
     font-size: 18px;
 }
 
-.task-tag {
+.main-chck > div > div :nth-child(2) span {
     padding: 8px 12px;
     background-color: #FFEBD3;
     border-radius: 50px;
     color: #FF5F26;
 }
 
-.more-icon {
-    cursor: pointer;
-}
 
-.task-description {
-    margin-left: 45px;
-}
 
-.toggle-icon {
+.main-chck > img {
     padding: 10px;
+}
+
+.main-chck > img:first-of-type {
     transform: rotate(-180deg);
-    cursor: pointer;
+}
+.subtask-container .main-chck label[for^="check-"] {
+    font-size: 16px;
+    text-decoration: line-through;
 }
 
-.task-menu {
-    background-color: white;
-    border: 1px solid #CCCED2;
-    border-radius: 8px;
-    padding: 24px;
-    gap: 12px;
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    left: 18rem;
-    top: 2.8rem;
-    z-index: 10;
+.subtask-container .main-chck img {
+    padding: 10px;
 }
 
-.menu-item {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    gap: 12px;
-    cursor: pointer;
-}
-
-.menu-item p {
-    margin: 0;
-}
-
+/* Subtask section */
 .subtask-container {
     background-color: #F5F5F5;
     border-radius: 8px;
 }
 
-.subtask-header {
+.subtask-container > div:first-child {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -261,14 +277,14 @@ body {
     padding: 16px 16px 0;
 }
 
-.subtask-header h1 {
+.subtask-container > div:first-child h1 {
     margin: 0;
     font-size: 16px;
     color: #293038;
     line-height: 100%;
 }
 
-.add-subtask-btn {
+.subtask-container > div:first-child button {
     display: flex;
     align-items: center;
     border: 1px solid #CCCED2;
@@ -279,59 +295,25 @@ body {
     padding: 6px 10px;
     gap: 10px;
     border-radius: 50px;
-    cursor: pointer;
 }
 
-.subtask-list {
+.subtask-container > div:last-child {
     padding: 16px;
     display: flex;
     flex-direction: column;
     gap: 10px;
 }
 
-.subtask-item {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
 
-.subtask-content {
-    display: flex;
-    flex-direction: column;
-}
 
-.subtask-header-inner {
-    display: flex;
-    flex-direction: row;
-    gap: 16px;
-    align-items: center;
-}
-
-.subtask-name {
-    color: #293038;
-    font-size: 16px;
-}
-
-.subtask-name.completed {
-    text-decoration: line-through;
-}
-
-.delete-icon {
-    padding: 10px;
-    cursor: pointer;
-}
-
-.completed-section {
-    width: 100%;
-}
-
-.divider {
+/* Completed section */
+.completed-section > div:first-child {
     height: 1px;
     background-color: #CCCED2;
     margin: 0;
 }
 
-.completed-header {
+.completed-section > div:last-child {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -339,15 +321,61 @@ body {
     margin-top: 24px;
 }
 
-.completed-icon {
+.completed-section > div:last-child img {
     transform: rotate(-90deg);
     vertical-align: middle;
 }
 
-.completed-text {
+.completed-section > div:last-child p {
     display: inline-block;
     font-size: 18px;
     color: #7A7F83;
     margin: 0;
     vertical-align: middle;
 }
+@media (max-width: 1024px) {
+.head {
+    padding: 20px 40px;
+}
+main{
+    width: 100%;
+}
+}
+
+
+@media (max-width: 425px) {
+    .head {
+        padding: 10px;
+    }
+
+    .profile p {
+        display: none;
+    }
+
+    .drpdwn{
+        width: 50%;
+        top: 14.7rem;
+       
+      }
+    main{
+        width: 100%;
+        height: 100%;
+    }
+
+    .main-tab{
+        margin: 10px;
+    }
+
+    .main-head{
+        flex-direction: column;
+        align-items: start;
+        gap: 16px;
+    }
+
+    .main-chck > div > div:first-child  {
+        display: flex;
+        flex-direction: column;
+    } 
+   
+}
+

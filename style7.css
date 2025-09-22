@@ -21,8 +21,8 @@ body {
     background-color: white;
     border-radius: 8px;
     position: absolute;
-    right: 0;
-    top: 10.7rem;
+    left: 18.5rem;
+    top: 14rem;
     padding: 24px;
     z-index: 1;
   }
@@ -190,7 +190,7 @@ main {
 }
 
 .main-chck > div :first-child {
-    display: flex; flex-direction: row; align-items: center;
+    display: flex; flex-direction: row;
     gap: 16px;
 }
 

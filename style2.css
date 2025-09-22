@@ -162,9 +162,10 @@ main {
 }
 
 .main-chck > div :first-child {
-  display: flex; flex-direction: row; align-items: center;
+  display: flex; flex-direction: row;
   gap: 16px;
 }
+
 
 .drpdwn{
   width: 300px;
@@ -228,7 +229,11 @@ main {
   background: url("./assest/icons/material-symbols--check.svg") no-repeat center;
   background-size: contain;
 }
-
+.drpdwn .drpdwn-row div input[type=radio]{
+  accent-color: #FF5F26;
+  width: 20px;
+  height: 20px;
+}
 .main-chck label[for^="check-"] {
   color: #293038;
   font-size: 18px;

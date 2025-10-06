@@ -10,3 +10,9 @@ aplikasi sederhana To-Do List yang saya buat menggunakan HTML dan CSS. Pada proj
 ![alt text](<assest/images/127.0.0.1_5500_page2new.html (3).png>)
 
 
+# Result REVISI
+![alt text](image.png)
+![alt text](image-2.png)
+![alt text](image-1.png)
+![alt text](image-3.png)
+![alt text](image-4.png)

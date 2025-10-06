@@ -17,5 +17,5 @@ Dibangun menggunakan **React.js** dan **Tailwind CSS**, Wazwez memiliki tampilan
 ![alt text](/assest/images/image-1.png)
 ![alt text](/assest/images/image-2.png)
 ![alt text](/assest/images/image-3.png)
-![alt text](/assest/images/image-4.png)
 ---
+

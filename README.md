@@ -19,20 +19,3 @@ Dibangun menggunakan **React.js** dan **Tailwind CSS**, Wazwez memiliki tampilan
 ![alt text](/assest/images/image-3.png)
 ![alt text](/assest/images/image-4.png)
 ---
-
-## ⚙️ Teknologi yang Digunakan
-
-- **Frontend**: React.js  
-- **Styling**: Tailwind CSS  
-- **State Management**: React Hooks (`useState`, `useEffect`)  
-- **Data Storage**: LocalStorage atau API  
-- **Build Tool**: Vite / Create React App  
-
----
-
-## 🧩 Cara Menjalankan Project
-
-1. **Clone Repository**
-   ```bash
-   git clone https://github.com/username/wazwez.git
-   cd wazwez

@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html>
+<html lang="id">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>weekly</title>
+    <title>Wazwez - Aplikasi To Do List</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -12,52 +12,72 @@
     />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link rel="stylesheet" href="./assest/css/style.css" />
+    <style>
+      input[type="radio"] {
+        accent-color: #ff5f26;
+      }
+    </style>
   </head>
 
   <body class="m-0 font-['Poppins',sans-serif] bg-gray-50">
     <!-- Header -->
-    <header class="px-5 py-3 md:px-10 lg:px-20 xl:px-20">
+    <header class="px-5 py-3 md:px-10 lg:px-20 xl:px-20" role="banner">
       <nav
         class="flex flex-row justify-between items-start md:items-center gap-4 md:gap-0"
+        aria-label="Navigasi utama"
       >
         <h1 class="text-2xl font-normal tracking-[2px] text-gray-800">
           waz<span class="text-[#FF5F26]">wez</span>.
         </h1>
         <div class="flex items-center gap-0 md:gap-6">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            class="mr-6"
+          <button 
+            class="mr-6" 
+            aria-label="Notifikasi - 1 notifikasi baru"
+            type="button"
           >
-            <g fill="none">
-              <path fill="#FF5F26" d="M19 1a4 4 0 1 0 0 8a4 4 0 0 0 0-8" />
-              <path
-                fill="#9E9E9E"
-                d="M14.376 2.022a5.5 5.5 0 0 0 4.375 8.473v3.328l2.463 4.927H.787l2.464-4.927V9a7.75 7.75 0 0 1 11.125-6.978"
-              />
-              <path fill="#FF5F26" d="M9 21v2h4v-2z" />
-            </g>
-          </svg>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              aria-hidden="true"
+            >
+              <g fill="none">
+                <path fill="#FF5F26" d="M19 1a4 4 0 1 0 0 8a4 4 0 0 0 0-8" />
+                <path
+                  fill="#9E9E9E"
+                  d="M14.376 2.022a5.5 5.5 0 0 0 4.375 8.473v3.328l2.463 4.927H.787l2.464-4.927V9a7.75 7.75 0 0 1 11.125-6.978"
+                />
+                <path fill="#FF5F26" d="M9 21v2h4v-2z" />
+              </g>
+            </svg>
+          </button>
           <div class="flex items-center gap-3">
             <div
               class="w-12 h-12 rounded-full flex items-center justify-center"
+              role="img"
+              aria-label="Foto profil Krozeo Jupiter"
             >
-              <img src="./assest/icons/profile.png" alt="" />
+              <img src="./assest/icons/profile.png" alt="Foto profil Krozeo Jupiter" />
             </div>
             <p class="text-lg text-[#293038] leading-6 hidden md:block">
               Krozeo Jupiter
             </p>
-            <svg
-              width="12"
-              height="10"
-              viewBox="0 0 12 10"
-              fill="none"
-              class="hidden md:block"
+            <button 
+              class="hidden md:block" 
+              aria-label="Menu profil pengguna"
+              type="button"
             >
-              <path d="M6 10L0 0h12L6 10z" fill="#293038" />
-            </svg>
+              <svg
+                width="12"
+                height="10"
+                viewBox="0 0 12 10"
+                fill="none"
+                aria-hidden="true"
+              >
+                <path d="M6 10L0 0h12L6 10z" fill="#293038" />
+              </svg>
+            </button>
           </div>
         </div>
       </nav>
@@ -66,6 +86,8 @@
     <!-- Main Container -->
     <main
       class="shadow-lg rounded-xl w-full md:max-w-4xl mx-auto my-5 md:my-10 flex bg-white min-h-[600px] relative"
+      role="main"
+      aria-label="Konten utama aplikasi to-do list"
     >
       <div class="w-full m-4 md:m-10 mb-6 md:mb-6 gap-4 flex flex-col relative">
         <!-- Main Header -->
@@ -73,9 +95,9 @@
           class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 md:gap-0"
         >
           <div class="flex flex-col">
-            <h1 class="text-[#FF5F26] text-base font-normal tracking-wide m-0">
+            <h2 class="text-[#FF5F26] text-base font-normal tracking-wide m-0">
               MY TASKS
-            </h1>
+            </h2>
             <div class="flex flex-col gap-3 mt-2">
               <p class="text-2xl text-[#293038] m-0 font-medium">To Do List</p>
               <p class="text-base text-[#7A7F83] m-0">
@@ -85,8 +107,10 @@
           </div>
           <button
             class="px-4 py-3 border-none bg-[#FF5F26] rounded-full gap-2 flex items-center text-base text-white font-bold hover:bg-[#e54f20] transition-colors tambah-tugas-btn"
+            aria-label="Tambah tugas baru"
+            type="button"
           >
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
               <path
                 d="M12 5v14m-7-7h14"
                 stroke="currentColor"
@@ -101,11 +125,15 @@
         <!-- Sort Section -->
         <div
           class="flex flex-col md:flex-row justify-between items-start md:items-center gap-3 md:gap-0"
+          role="region"
+          aria-label="Pengaturan pengurutan tugas"
         >
-          <h1 class="m-0 text-base text-[#7A7F83] font-normal">Sort By</h1>
+          <h2 class="m-0 text-base text-[#7A7F83] font-normal" id="sort-label">Sort By</h2>
           <button
             id="sort-toggle-btn"
-            class="px-4 py-2 border border-[#FF5F26] bg-white text-[#FF5F26] rounded-full gap-2 flex items-center focus:border-gray-400 focus:text-gray-400"
+            class="group px-4 py-2 border border-[#FF5F26] bg-white text-[#FF5F26] rounded-full gap-2 flex items-center focus:border-gray-400 focus:text-gray-400"
+            aria-label="Buka menu pengurutan"
+            type="button"
           >
             <span id="current-sort-label">By Tanggal</span>
             <svg
@@ -114,8 +142,10 @@
               viewBox="0 0 12 10"
               fill="none"
               id="sort-arrow"
+              class="fill-[#FF5F26] group-focus:fill-gray-400 transition-colors duration-200"
+              aria-hidden="true"
             >
-              <path d="M6 10L0 0h12L6 10z" fill="#FF5F26" />
+              <path d="M6 10L0 0h12L6 10z" />
             </svg>
           </button>
         </div>
@@ -124,55 +154,82 @@
         <div
           id="sort-box"
           class="hidden flex-col gap-2 p-[24px] absolute rounded-md bg-white shadow-md border border-gray-200 top-43 w-[285px] z-10 right-0"
+          role="menu"
+          aria-labelledby="sort-label"
         >
           <div
             class="flex items-center gap-2 justify-between sort-option cursor-pointer hover:bg-gray-50 p-2 rounded"
             data-sort="date"
+            role="menuitemradio"
+            aria-checked="true"
+            tabindex="0"
           >
-            <p>By Tanggal</p>
+            <label for="by-tanggal">By Tanggal</label>
             <input
               type="radio"
               name="sort"
               value="date"
               checked
+              id="by-tanggal"
               class="text-[#FF5F26] focus:ring-[#FF5F26]"
+              aria-label="Urutkan berdasarkan tanggal"
             />
           </div>
           <div
             class="flex items-center gap-2 justify-between sort-option cursor-pointer hover:bg-gray-50 p-2 rounded"
             data-sort="time"
+            role="menuitemradio"
+            aria-checked="false"
+            tabindex="0"
           >
-            <p>By Time</p>
+            <label for="by-time">By Time</label>
             <input
               type="radio"
               name="sort"
               value="time"
+              id="by-time"
               class="text-[#FF5F26] focus:ring-[#FF5F26]"
+              aria-label="Urutkan berdasarkan waktu"
             />
           </div>
           <div
             class="flex items-center gap-2 justify-between sort-option cursor-pointer hover:bg-gray-50 p-2 rounded"
             data-sort="newest"
+            role="menuitemradio"
+            aria-checked="false"
+            tabindex="0"
           >
-            <p>Terbaru</p>
+            <label for="terbaru">Terbaru</label>
             <input
+              id="terbaru"
               type="radio"
               name="sort"
               value="newest"
               class="text-[#FF5F26] focus:ring-[#FF5F26]"
+              aria-label="Urutkan dari yang terbaru"
             />
           </div>
         </div>
 
         <!-- Tasks List -->
-        <div class="flex flex-col gap-2 relative tasks-container">
+        <div 
+          class="flex flex-col gap-2 relative tasks-container"
+          role="list"
+          aria-label="Daftar tugas aktif"
+        >
           <!-- Tasks -->
         </div>
 
         <!-- Completed Section -->
         <div class="completed-section mt-auto pt-8">
-          <div class="h-px bg-[#CCCED2] mb-6"></div>
-          <div class="flex items-center gap-2 pb-4 cursor-pointer" id="completed-toggle">
+          <div class="h-px bg-[#CCCED2] mb-6" role="separator" aria-hidden="true"></div>
+          <div
+            class="flex items-center gap-2 pb-4 cursor-pointer"
+            id="completed-toggle"
+            role="button"
+            aria-label="Toggle tampilan tugas yang terselesaikan"
+            tabindex="0"
+          >
             <svg
               width="12"
               height="10"
@@ -180,6 +237,7 @@
               fill="none"
               class="transform -rotate-90 transition-transform duration-200"
               id="completed-arrow"
+              aria-hidden="true"
             >
               <path d="M6 10L0 0h12L6 10z" fill="#7A7F83" />
             </svg>
@@ -187,11 +245,15 @@
               Terselesaikan (<span id="completed-count">0</span> tugas)
             </p>
           </div>
-          <div class="completed-tasks-list hidden" id="completed-tasks"></div>
+          <div 
+            class="completed-tasks-list hidden" 
+            id="completed-tasks"
+            role="list"
+            aria-label="Daftar tugas yang terselesaikan"
+          ></div>
         </div>
       </div>
     </main>
-
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="./assest/js/script.js"></script>
   </body>

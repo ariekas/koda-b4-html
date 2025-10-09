@@ -12,3 +12,70 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   input[type="date"] {
     -moz-appearance: textfield;
   }
+
+.checkbox-checked {
+  background-color: #FF5F26 !important;
+  border-color: #FF5F26 !important;
+}
+
+.checkmark-visible {
+  opacity: 1 !important;
+}
+
+
+.task-completed {
+  text-decoration: line-through;
+  opacity: 0.6;
+}
+
+.subtask-completed {
+  text-decoration: line-through;
+  opacity: 0.6;
+}
+
+
+.task-input-editing {
+  border-left: 2px solid #FF5F26;
+  padding-left: 6px;
+}
+
+.input-error {
+  animation: pulse 1s;
+  border-color: #ef4444 !important;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+
+.rotate-0 {
+  transform: rotate(0deg);
+}
+
+.rotate-180 {
+  transform: rotate(180deg);
+}
+
+.-rotate-90 {
+  transform: rotate(-90deg);
+}
+
+.checkbox-custom,
+.checkmark,
+.task-label,
+.subtask-name-input {
+  transition: all 0.2s ease-in-out;
+}
+
+
+@media (max-width: 768px) {
+  .task-input-editing {
+    font-size: 16px;
+  }
+}

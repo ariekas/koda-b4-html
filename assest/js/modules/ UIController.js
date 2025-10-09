@@ -1,4 +1,3 @@
-// modules/UIController.js
 export class UIController {
   constructor(taskManager) {
     this.taskManager = taskManager;

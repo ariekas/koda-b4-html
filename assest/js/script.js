@@ -1,9 +1,8 @@
-// TaskManager.js - Main Module
 import { SortManager } from './modules/SortManager.js';
 import { TaskCRUD } from './modules/TaskCRUD.js';
 import { SubtaskManager } from './modules/SubtaskManager.js';
 import { CheckboxHandler } from './modules/CheckboxHandler.js';
-import { UIController } from './modules/UIController.js';
+import { UIController } from './modules/ UIController.js';
 import { TaskMovement } from './modules/TaskMovement.js';
 
 class TaskManager {

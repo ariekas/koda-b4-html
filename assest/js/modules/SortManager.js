@@ -1,4 +1,3 @@
-// modules/SortManager.js
 export class SortManager {
   constructor(taskManager) {
     this.taskManager = taskManager;

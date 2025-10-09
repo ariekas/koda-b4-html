@@ -1,4 +1,3 @@
-// modules/CheckboxHandler.js
 export class CheckboxHandler {
   constructor(taskManager) {
     this.taskManager = taskManager;

@@ -1,4 +1,3 @@
-// modules/SubtaskManager.js
 export class SubtaskManager {
   constructor(taskManager) {
     this.taskManager = taskManager;
